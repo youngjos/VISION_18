@@ -3,7 +3,7 @@ import numpy as np
 
 # Gimp uses H = 0-360, S = 0-100 and V = 0-100. But OpenCV uses  H: 0 - 180, S: 0 - 255, V: 0 - 255
 
-#live image capture filtering our yellow stuff and light green for some reason... Still looking into hsv color ranges kinda just trial and error until it worked...
+#live image capture filtering our yellow stuff and light green for some reason... Still looking into hsv color ranges kinda just trial and error until it worked...~
 cap = cv2.VideoCapture(0)
 
 while(cap.isOpened()):

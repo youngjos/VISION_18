@@ -1,0 +1,7 @@
+[hsv_vals]
+h_low = 75
+s_low = 150
+v_low = 205
+h_high = 100
+s_high = 200
+v_high = 255
