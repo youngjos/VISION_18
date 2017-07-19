@@ -2,7 +2,7 @@
 Vision code for use on a NVIDIA Jetson TX1 and Web Cam for the FIRST Robotics Competition
 
 # Getting Started / How 2 Install
-To use this Python code without error you need certain package for python.
+To use this Python code without error you need certain packages for Python.
 
 Step One : Download Anaconda 3.
 
