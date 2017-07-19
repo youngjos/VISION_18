@@ -1,0 +1,7 @@
+host
+port
+window size
+camera width
+camera height
+hsv low
+hsv high
