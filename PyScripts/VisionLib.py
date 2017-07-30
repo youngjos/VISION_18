@@ -35,8 +35,9 @@ def get_mask(image) : # takes bgr image and converts it into filtered hsv image 
     masked = cv2.inRange(hsv_image, hsv.low_hsv, hsv.high_hsv)  # applies hsv threshold to hsv image
     return masked
 
-def get_contours(image): # takes an image (probably masked) and finds the contours.
-    img, contours, hierarchy = cv2.findContours(image,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+def get_contours(image): # takes an image and finds the contours.
+    masked = get_mask(image)
+    img, contours, hierarchy = cv2.findContours(masked, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     contours = sorted(contours, key=cv2.contourArea, reverse=True)
     return contours
 
@@ -54,22 +55,62 @@ def find_largest_contour(contours) : # takes an array of contours and find the l
 
     return contours[largest_contour_index]
 
-def draw_largest_box(image) : # takes a masked image, draws a bounding box around the largest contour, and returns the x y cooridinates of the top left point, width and height, and angle of box.
-    masked_im = get_mask(image)
-    contours = get_contours(masked_im)
+def get_largest_box(image) : # takes a image, draws a bounding box around the largest contour, and returns the x y cooridinates of the top left point, width and height.
+    contours = get_contours(image)
     largest_contour = find_largest_contour(contours)
-    rect = cv2.minAreaRect(largest_contour)
-    (x,y),(width,height), theta = cv2.minAreaRect(largest_contour)
-    box = cv2.boxPoints(rect)
-    box = np.int0(box)
-    image = cv2.drawContours(image, [box], 0, (0, 0, 255), 2)
-    cv2.imwrite("target.jpg", image)
+    x, y, w, h = cv2.boundingRect(largest_contour)
+    #image = cv2.drawContours(image, largest_contour, 0, (0, 0, 255), 2)
+    #cv2.imwrite("target.jpg", image)
 
-    return theta
+    return x, y, w, h
+
+def get_center_of_target(image) : # takes image and finds the center of the target.
+    x, y, w, h = get_largest_box(image)
+    half_width = w/2
+    half_height = h/2
+    center_x = int(x + half_width)
+    center_y = int(y + half_height)
+    center_point = [center_x, center_y]
+
+    return center_point
+
+def get_center_of_image(image) : # takes image and finds the center of the image.
+    height, width, channels = image.shape
+    center_point = [int(width/2), int(height/2)]
+    return center_point
+
+def get_area_of_target(image) : # takes an image and finds the area of the target
+    x, y, w, h = get_largest_box(image)
+
+    return w * h
+
+def get_width_of_target(image) : # takes an image and finds the widtb of the target
+    x, y, w, h = get_largest_box(image)
+
+    return w
+
+def get_height_of_target(image) : # takes an image and finds the height of the target
+    x, y, w, h = get_largest_box(image)
+
+    return h
+
+def get_width_of_image(image) : # takes image and finds the width of the image.
+    height, width, channels = image.shape
+
+    return width
+
+def get_height_of_image(image) : # takes image and finds the height of the image.
+    height, width, channels = image.shape
+
+    return height
 
 
-masked = cv2.imread("image.jpg")
-print(draw_largest_box(masked))
+
+
+
+
+
+
 
 
 
