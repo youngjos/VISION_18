@@ -1,10 +1,16 @@
 {
     "hsv":{
-        "h_low":50,
-        "s_low": 125,
-        "v_low": 125,
-        "h_high": 100,
+        "h_low": 0,
+        "s_low": 0,
+        "v_low": 255,
+        "h_high": 255,
         "s_high": 255,
         "v_high": 255
+    },
+    "camera": {
+        "fov": 120,
+        "resolution_width": 1280,
+        "resolution_height": 960
     }
+
 }

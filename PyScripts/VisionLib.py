@@ -2,11 +2,18 @@ import cv2
 import numpy as np
 import math
 import json
+from copy import deepcopy
+
+
+with open('config.json') as json_data_file:
+    config = json.load(json_data_file)
+
+class camera :
+    FOV = config['camera']['fov']
+    RESOLUTION_X = config['camera']['resolution_width']
+    RESOLUTION_Y = config['camera']['resolution_height']
 
 class hsv :
-
-    with open('config.json') as json_data_file:
-        config = json.load(json_data_file)
 
     # Reads calibrated HSV values and turns them into an array for class use.
     h_low = config['hsv']['h_low']
@@ -104,7 +111,77 @@ def get_height_of_image(image) : # takes image and finds the height of the image
 
     return height
 
+def get_x_offset(image) : # takes image and finds the x offset of the target in relation to the center of the image.
+    center_image = get_center_of_image(image)
+    center_target = get_center_of_target(image)
 
+    #offset is x in centerimagex + x = centertargetx
+
+    return center_target[0] - center_image[0]
+
+def get_y_offset(image) : # takes image and finds the y offset of the target in relation to the center of the image.
+    center_image = get_center_of_image(image)
+    center_target = get_center_of_target(image)
+
+    #offset is y in centerimagey + y = centertargety
+
+    return center_target[1] - center_image[1]
+
+def get_offset_angle(image) : # takes an image and finds the angle offset of the target.
+
+    x_offset = get_x_offset(image)
+    x_res = camera.RESOLUTION_X
+    y_res = camera.RESOLUTION_Y
+    fov = camera.FOV
+    x_res *= x_res
+    y_res *= y_res
+    diagonal_pixels = math.sqrt(x_res + y_res)
+    degree_per_pixel = fov / diagonal_pixels
+    offset_angle =  degree_per_pixel * x_offset
+
+    return offset_angle
+
+def get_distance(image, known_width, focal_length) :
+
+    return (known_width * focal_length) / get_width_of_target(image)
+
+# Cool Meme
+im = cv2.imread("5.jpg")
+img = im
+og = deepcopy(im)
+
+def nothing(x) :
+    pass
+
+cv2.namedWindow("image")
+cv2.namedWindow("Threshholds")
+cv2.createTrackbar('H LOW','Threshholds',0,255,nothing)
+cv2.createTrackbar('S LOW','Threshholds',0,255,nothing)
+cv2.createTrackbar('V LOW','Threshholds',0,255,nothing)
+cv2.createTrackbar('H HIGH','Threshholds',0,255,nothing)
+cv2.createTrackbar('S HIGH','Threshholds',0,255,nothing)
+cv2.createTrackbar('V HIGH','Threshholds',0,255,nothing)
+
+while(1):
+
+    cv2.imshow('image',img)
+    k = cv2.waitKey(1) & 0xFF
+    if k == 27:
+        break
+
+    hlow = cv2.getTrackbarPos('H LOW','Threshholds')
+    slow = cv2.getTrackbarPos('S LOW','Threshholds')
+    vlow = cv2.getTrackbarPos('V LOW','Threshholds')
+    hhigh = cv2.getTrackbarPos('H HIGH', 'Threshholds')
+    shigh = cv2.getTrackbarPos('S HIGH', 'Threshholds')
+    vhigh = cv2.getTrackbarPos('V HIGH', 'Threshholds')
+    the_low_hsv = np.array([hlow, slow, vlow], np.uint8)
+    the_high_hsv = np.array([hhigh, shigh, vhigh], np.uint8)
+
+    masked = cv2.inRange(og, the_low_hsv, the_high_hsv)  # applies hsv threshold to hsv image
+    img = cv2.bitwise_and(og, og, mask=masked)
+
+cv2.destroyAllWindows()
 
 
 
