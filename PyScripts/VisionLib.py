@@ -91,7 +91,7 @@ def get_area_of_target(image) : # takes an image and finds the area of the targe
 
     return w * h
 
-def get_width_of_target(image) : # takes an image and finds the widtb of the target
+def get_width_of_target(image) : # takes an image and finds the width of the target
     x, y, w, h = get_largest_box(image)
 
     return w
@@ -141,47 +141,43 @@ def get_offset_angle(image) : # takes an image and finds the angle offset of the
 
     return offset_angle
 
-def get_distance(image, known_width, focal_length) :
+def get_horizontal_offset_degrees(image):
+    centerPoint = get_center_of_target(image)
+    horizontalFov = 63.54
+    resWidth = get_width_of_image(image)
+    return ((centerPoint[0] * horizontalFov) / resWidth) - (horizontalFov / 2)
 
-    return (known_width * focal_length) / get_width_of_target(image)
+def get_horizontal_offset_radians(image) :
 
-# Cool Meme
-im = cv2.imread("5.jpg")
-img = im
-og = deepcopy(im)
+    return (get_horizontal_offset_degrees(image)  * (2 * math.pi)) / 360.0
 
-def nothing(x) :
-    pass
+def get_x_offset_inches(image) :
 
-cv2.namedWindow("image")
-cv2.namedWindow("Threshholds")
-cv2.createTrackbar('H LOW','Threshholds',0,255,nothing)
-cv2.createTrackbar('S LOW','Threshholds',0,255,nothing)
-cv2.createTrackbar('V LOW','Threshholds',0,255,nothing)
-cv2.createTrackbar('H HIGH','Threshholds',0,255,nothing)
-cv2.createTrackbar('S HIGH','Threshholds',0,255,nothing)
-cv2.createTrackbar('V HIGH','Threshholds',0,255,nothing)
+    real_target_width = 12 # in inches
 
-while(1):
+    return (get_x_offset(image) * real_target_width) / get_width_of_target(image)
 
-    cv2.imshow('image',img)
-    k = cv2.waitKey(1) & 0xFF
-    if k == 27:
-        break
+def get_distance(image) :
+    print(get_horizontal_offset_degrees(image))
+    return get_x_offset_inches(image) / math.tan(get_horizontal_offset_radians(image))
 
-    hlow = cv2.getTrackbarPos('H LOW','Threshholds')
-    slow = cv2.getTrackbarPos('S LOW','Threshholds')
-    vlow = cv2.getTrackbarPos('V LOW','Threshholds')
-    hhigh = cv2.getTrackbarPos('H HIGH', 'Threshholds')
-    shigh = cv2.getTrackbarPos('S HIGH', 'Threshholds')
-    vhigh = cv2.getTrackbarPos('V HIGH', 'Threshholds')
-    the_low_hsv = np.array([hlow, slow, vlow], np.uint8)
-    the_high_hsv = np.array([hhigh, shigh, vhigh], np.uint8)
 
-    masked = cv2.inRange(og, the_low_hsv, the_high_hsv)  # applies hsv threshold to hsv image
-    img = cv2.bitwise_and(og, og, mask=masked)
+def get_target_offset_rightedge(image) : # find the pixel offset of the center of the target to the most right edge of the given image.
 
-cv2.destroyAllWindows()
+    center = get_center_of_target(image)
+    center_x = center[0]
+
+    return get_width_of_image(image) - center_x
+
+#IPhone 6 29mm fl
+image = cv2.imread("image.JPG")
+
+print(get_x_offset_inches(image))
+print(get_distance(image))
+
+
+
+
 
 
 
