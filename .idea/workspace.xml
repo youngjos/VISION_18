@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afc3cafd-4a9c-4ded-aa53-942418834753" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PyScripts/image.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Vision Images/IMG_0177.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Vision Images/IMG_0179.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Vision Images/IMG_0180.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Vision Images/IMG_0181.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Vision Images/IMG_0182.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Vision Images/IMG_0183.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Vision Images/IMG_0184.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Vision Images/IMG_0185.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Vision Images/IMG_0186.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Vision Images/IMG_0187.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Vision Images/IMG_0188.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Vision Images/IMG_0189.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PyScripts/IMG_0184.JPG" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PyScripts/masked.JPG" afterPath="$PROJECT_DIR$/PyScripts/masked.JPG" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PyScripts/Sender.py" afterPath="$PROJECT_DIR$/PyScripts/Sender.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PyScripts/VisionLib.py" afterPath="$PROJECT_DIR$/PyScripts/VisionLib.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PyScripts/config.json" afterPath="$PROJECT_DIR$/PyScripts/config.json" />
     </list>
@@ -27,18 +15,22 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/VISION18$VisionLib.coverage" NAME="VisionLib Coverage Results" MODIFIED="1507681769990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PyScripts" />
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="VisionLib.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PyScripts/VisionLib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="149" column="25" lean-forward="false" selection-start-line="149" selection-start-column="25" selection-end-line="149" selection-end-column="25" />
+            <state relative-caret-position="255">
+              <caret line="126" column="18" lean-forward="false" selection-start-line="126" selection-start-column="18" selection-end-line="126" selection-end-column="18" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IMG_0184.JPG" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PyScripts/IMG_0184.JPG">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -54,64 +46,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="image.JPG" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PyScripts/image.JPG">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IMG_0180.JPG" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vision Images/IMG_0180.JPG">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IMG_0177.JPG" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vision Images/IMG_0177.JPG">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IMG_0189.JPG" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vision Images/IMG_0189.JPG">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sender.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PyScripts/Sender.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Reciever.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PyScripts/Reciever.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="45" lean-forward="false" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_socket.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm2017.2/system/python_stubs/775228029/_socket.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9656">
-              <caret line="568" column="8" lean-forward="false" selection-start-line="568" selection-start-column="8" selection-end-line="568" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -189,7 +123,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -212,27 +145,29 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TrajectoryLib" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/PyScripts/Filter.py" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Josh\Documents\Workspaces\VISION18\PyScripts" />
-      <recent name="C:\Users\Josh\Documents\Workspaces\VISION18" />
-      <recent name="C:\Users\Josh\Documents\Workspaces\VISION18\Testing\SampleImages" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Josh\Documents\Workspaces\VISION18\PyScripts" />
       <recent name="C:\Users\Josh\Documents\Workspaces\VISION18\SampleScript" />
       <recent name="C:\Users\Josh\Documents\Workspaces\VISION18\Testing" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Josh\Documents\Workspaces\VISION18\Vision Images" />
+      <recent name="C:\Users\Josh\Documents\Workspaces\VISION18\PyScripts" />
+      <recent name="C:\Users\Josh\Documents\Workspaces\VISION18" />
+      <recent name="C:\Users\Josh\Documents\Workspaces\VISION18\Testing\SampleImages" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -247,7 +182,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.VisionLib">
+  <component name="RunManager">
     <configuration name="Filter" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -493,11 +428,6 @@
       <item index="3" class="java.lang.String" itemvalue="Python.Sender" />
       <item index="4" class="java.lang.String" itemvalue="Python.VisionLib" />
     </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.VisionLib" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -513,26 +443,26 @@
       <option name="presentableId" value="Default" />
       <updated>1500403344536</updated>
       <workItem from="1507077727244" duration="23000" />
+      <workItem from="1508088325695" duration="15000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23000" />
+    <option name="totallyTimeSpent" value="38000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1796875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32740587" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1796875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3255814" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32740587" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39957717" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -550,6 +480,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3255814" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -566,8 +497,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PyScripts/image_output.jpg" />
-    <entry file="file://$PROJECT_DIR$/PyScripts/image_MEME.jpg" />
     <entry file="file://$PROJECT_DIR$/PyScripts/image6.jpg" />
     <entry file="file://$PROJECT_DIR$/PyScripts/test.jpg" />
     <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/775228029/builtins.py">
@@ -639,7 +568,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9656">
           <caret line="568" column="8" lean-forward="false" selection-start-line="568" selection-start-column="8" selection-end-line="568" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -647,33 +575,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="45" lean-forward="false" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vision Images/IMG_0177.JPG">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vision Images/IMG_0189.JPG">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vision Images/IMG_0180.JPG">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Vision Images/IMG_0177.JPG" />
+    <entry file="file://$PROJECT_DIR$/Vision Images/IMG_0189.JPG" />
+    <entry file="file://$PROJECT_DIR$/Vision Images/IMG_0180.JPG" />
     <entry file="file://$PROJECT_DIR$/PyScripts/Sender.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PyScripts/image.JPG" />
+    <entry file="file://$PROJECT_DIR$/Vision Images/IMG_0187.JPG" />
     <entry file="file://$PROJECT_DIR$/PyScripts/config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -682,20 +598,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PyScripts/masked.JPG">
+    <entry file="file://$PROJECT_DIR$/PyScripts/IMG_0184.JPG">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PyScripts/image.JPG">
+    <entry file="file://$PROJECT_DIR$/PyScripts/masked.JPG">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PyScripts/VisionLib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="149" column="25" lean-forward="false" selection-start-line="149" selection-start-column="25" selection-end-line="149" selection-end-column="25" />
+        <state relative-caret-position="255">
+          <caret line="126" column="18" lean-forward="false" selection-start-line="126" selection-start-column="18" selection-end-line="126" selection-end-column="18" />
           <folding />
         </state>
       </provider>

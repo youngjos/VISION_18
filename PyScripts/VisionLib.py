@@ -2,8 +2,6 @@ import cv2
 import numpy as np
 import math
 import json
-from copy import deepcopy
-
 
 with open('config.json') as json_data_file:
     config = json.load(json_data_file)
@@ -66,8 +64,6 @@ def get_largest_box(image) : # takes a image, draws a bounding box around the la
     contours = get_contours(image)
     largest_contour = find_largest_contour(contours)
     x, y, w, h = cv2.boundingRect(largest_contour)
-    #image = cv2.drawContours(image, largest_contour, 0, (0, 0, 255), 2)
-    #cv2.imwrite("target.jpg", image)
 
     return x, y, w, h
 
@@ -115,20 +111,15 @@ def get_x_offset(image) : # takes image and finds the x offset of the target in 
     center_image = get_center_of_image(image)
     center_target = get_center_of_target(image)
 
-    #offset is x in centerimagex + x = centertargetx
-
     return center_target[0] - center_image[0]
 
 def get_y_offset(image) : # takes image and finds the y offset of the target in relation to the center of the image.
     center_image = get_center_of_image(image)
     center_target = get_center_of_target(image)
 
-    #offset is y in centerimagey + y = centertargety
-
     return center_target[1] - center_image[1]
 
 def get_offset_angle(image) : # takes an image and finds the angle offset of the target.
-
     x_offset = get_x_offset(image)
     x_res = camera.RESOLUTION_X
     y_res = camera.RESOLUTION_Y
@@ -148,32 +139,25 @@ def get_horizontal_offset_degrees(image):
     return ((centerPoint[0] * horizontalFov) / resWidth) - (horizontalFov / 2)
 
 def get_horizontal_offset_radians(image) :
-
     return (get_horizontal_offset_degrees(image)  * (2 * math.pi)) / 360.0
 
 def get_x_offset_inches(image) :
-
-    real_target_width = 12 # in inches
+    real_target_width = 12 # real target width in inches tho
 
     return (get_x_offset(image) * real_target_width) / get_width_of_target(image)
 
 def get_distance(image) :
-    print(get_horizontal_offset_degrees(image))
     return get_x_offset_inches(image) / math.tan(get_horizontal_offset_radians(image))
 
+def get_distance_2(image) : # needs hella work...
+    return math.sqrt((get_x_offset_inches(image) * get_x_offset_inches(image)) * (get_distance(image) * get_distance(image)))
 
-def get_target_offset_rightedge(image) : # find the pixel offset of the center of the target to the most right edge of the given image.
+image = cv2.imread("IMG_0184.JPG")
+get_mask(image)
+cv2.imwrite("masked.JPG", get_mask(image))
 
-    center = get_center_of_target(image)
-    center_x = center[0]
-
-    return get_width_of_image(image) - center_x
-
-#IPhone 6 29mm fl
-image = cv2.imread("image.JPG")
-
-print(get_x_offset_inches(image))
 print(get_distance(image))
+
 
 
 
