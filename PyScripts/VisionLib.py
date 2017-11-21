@@ -119,19 +119,6 @@ def get_y_offset(image) : # takes image and finds the y offset of the target in 
 
     return center_target[1] - center_image[1]
 
-def get_offset_angle(image) : # takes an image and finds the angle offset of the target.
-    x_offset = get_x_offset(image)
-    x_res = camera.RESOLUTION_X
-    y_res = camera.RESOLUTION_Y
-    fov = camera.FOV
-    x_res *= x_res
-    y_res *= y_res
-    diagonal_pixels = math.sqrt(x_res + y_res)
-    degree_per_pixel = fov / diagonal_pixels
-    offset_angle =  degree_per_pixel * x_offset
-
-    return offset_angle
-
 def get_horizontal_offset_degrees(image):
     centerPoint = get_center_of_target(image)
     horizontalFov = 63.54
@@ -156,7 +143,7 @@ image = cv2.imread("IMG_0184.JPG")
 get_mask(image)
 cv2.imwrite("masked.JPG", get_mask(image))
 
-print(get_distance(image))
+print(get_horizontal_offset_degrees(image))
 
 
 

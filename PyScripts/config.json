@@ -8,9 +8,8 @@
         "v_high": 255
     },
     "camera": {
-        "fov": 120,
+        "fov": 63.54,
         "resolution_width": 1280,
         "resolution_height": 960
     }
-
 }
