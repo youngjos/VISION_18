@@ -144,23 +144,3 @@ get_mask(image)
 cv2.imwrite("masked.JPG", get_mask(image))
 
 print(get_horizontal_offset_degrees(image))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
