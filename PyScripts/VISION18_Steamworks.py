@@ -3,8 +3,6 @@ import time
 from VisionLib import *
 from networktables import NetworkTables
 
-
-
 # To see messages from networktables, you must setup logging
 import logging
 logging.basicConfig(level=logging.DEBUG)
@@ -17,8 +15,6 @@ vision_table = NetworkTables.getTable("vision")
 
 i = 0
 while True:
-
-
     vision_table.putNumber("visionTime", i)
     time.sleep(1)
     i += 1
